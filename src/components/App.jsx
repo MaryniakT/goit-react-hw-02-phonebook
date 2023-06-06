@@ -21,7 +21,9 @@ export class App extends Component {
       return;
     }
     const updatedContacts = [...this.state.contacts, newContact];
-    this.setState({ contacts: updatedContacts });
+   this.setState(prevState => ({
+      contacts: [...prevState.contacts, updatedContacts],
+    }));
   };
 
   deleteContact = contactId => {
