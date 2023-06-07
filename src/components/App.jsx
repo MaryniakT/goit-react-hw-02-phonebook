@@ -20,9 +20,9 @@ export class App extends Component {
       console.log(duplicateContact.name);
       return;
     }
-    const updatedContacts = [...this.state.contacts, newContact];
+    // const updatedContacts = [...this.state.contacts, newContact];
    this.setState(prevState => ({
-      contacts: [...prevState.contacts, updatedContacts],
+      contacts: [...prevState.contacts, newContact],
     }));
   };
 
